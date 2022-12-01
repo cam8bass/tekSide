@@ -1,0 +1,52 @@
+:root {
+  // === Fonts ===
+  --fontBrand: "Nabla", cursive;
+  --fontTitle: "Goldman", cursive;
+  --fontSubtitle: "Michroma", sans-serif;
+  --fontText: "Open Sans", sans-serif;
+
+  // === Colors ===
+  --backgroundColor-primary-1: rgb(239, 239, 239);
+  --backgroundColor-primary-2: rgb(223, 223, 223);
+
+  --backgrounColor-secondary-1: rgb(82, 82, 82);
+  --backgrounColor-secondary-: rgb(56, 56, 56);
+
+  --success-1: #2ecc71;
+  --success-2: #27ae60;
+
+  --danger-1: #e74c3c;
+  --danger-2: #c0392b;
+
+  --orange-1: #e67e22;
+  --orange-2: #d35400;
+
+  --colorText-1: rgb(150, 150, 150);
+  --colorText-2: rgb(56, 56, 56);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: var(--colorText-2);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
