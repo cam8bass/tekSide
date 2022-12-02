@@ -10,7 +10,7 @@
   --backgroundColor-primary-2: rgb(223, 223, 223);
 
   --backgrounColor-secondary-1: rgb(82, 82, 82);
-  --backgrounColor-secondary-: rgb(56, 56, 56);
+  --backgrounColor-secondary-2: #383838;
 
   --success-1: #2ecc71;
   --success-2: #27ae60;
@@ -18,8 +18,8 @@
   --danger-1: #e74c3c;
   --danger-2: #c0392b;
 
-  --orange-1: #e67e22;
-  --orange-2: #d35400;
+  --orange-1: rgb(244, 81, 32);
+  --orange-2: rgb(238, 67, 15);
 
   --colorText-1: rgb(150, 150, 150);
   --colorText-2: rgb(56, 56, 56);
@@ -41,6 +41,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   color: var(--colorText-2);
+  background-color: var(--backgroundColor-primary-1);
 }
 
 a {
@@ -49,4 +50,9 @@ a {
 
 ul {
   list-style: none;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
 }
