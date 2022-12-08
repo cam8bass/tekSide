@@ -26,7 +26,7 @@ defineProps<{
             <span class="navigation__link-article--number">{{
               totalCartQuantity
             }}</span>
-            {{ totalCartQuantity < 2 ? "article" : "articles" }})</span
+            {{ totalCartQuantity > 1 ? "articles" : "article" }} )</span
           >
         </button>
       </li>
@@ -37,6 +37,7 @@ defineProps<{
 <style lang="scss" scoped>
 .navigation {
   grid-column: 3/-1;
+  align-self: center;
 
   &__list {
     display: flex;

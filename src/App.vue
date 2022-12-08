@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import HeaderVue from "./components/Header/Header.vue";
+import HeaderVue from "./components/Header/TheHeader.vue";
 import ArticleVue from "./components/Article/Article.vue";
 import CartVue from "./components/Cart/Cart.vue";
-import FooterVue from "./components/Footer.vue";
+import FooterVue from "./components/TheFooter.vue";
 import { reactive } from "vue";
 import type { ArticlesInterface } from "./interfaces";
 import data from "./data/articles";
 import type { CartInterface } from "./interfaces/CartInterface";
-import { computed } from "@vue/reactivity";
+import { computed } from "vue";
 
 const state = reactive<{
   articles: ArticlesInterface[];
@@ -26,9 +26,9 @@ function addArticleToCart(articleId: number): void {
 
     if (articleInCart) {
       articleInCart.quantity++;
-      articleInCart.price = article.price * articleInCart.quantity;
+      articleInCart.pricePerItem = article.price * articleInCart.quantity;
     } else {
-      state.cart.push({ ...article, quantity: 1 });
+      state.cart.push({ ...article, quantity: 1, pricePerItem: article.price });
     }
   }
 }
@@ -45,15 +45,15 @@ function removeArticleToCart(articleId: number): void {
     if (articleFromCart?.quantity === 1) {
       state.cart = state.cart.filter((articles) => articles.id !== articleId);
     } else {
-      articleFromCart.price -= startingPrice.price;
+      articleFromCart.pricePerItem -= startingPrice.price;
       articleFromCart.quantity--;
     }
   }
 }
 
-const totalArticlesQuantityInCart = computed(() => {
- return  state.cart.reduce((acc, product) => {
-    return acc+product.quantity;
+const totalArticlesQuantityInCart = computed<number>(() => {
+  return state.cart.reduce((acc, product) => {
+    return acc + product.quantity;
   }, 0);
 });
 </script>

@@ -10,11 +10,10 @@ defineProps<{
   <header>
     <a href="" class="header__logo">
       <img
-        src="src/assets/images/logo.svg"
+        src="src/assets/images/logo/logo-2.png"
         alt="logo"
         class="header__logo-icon"
       />
-      <span class="header__logo-brand">Tekside</span>
     </a>
     <Search />
     <Navigation :totalCartQuantity="totalCartQuantity" />
@@ -30,14 +29,14 @@ defineProps<{
   );
   padding: 2rem;
   display: grid;
-  grid-template-columns: min-content 1fr max-content;
+  grid-template-columns: max-content 1fr max-content;
   &__logo {
     grid-column: 1/2;
-    display: flex;
-    align-items: center;
+    align-self: center;
     &-icon {
-      width: 8rem;
-      height: 8rem;
+      width: auto;
+      height: 5rem;
+
     }
 
     &-brand {

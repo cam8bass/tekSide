@@ -7,13 +7,6 @@
       class="search__input"
       placeholder="Rechercher un produit"
     />
-    <button class="btn search__btn">
-      <img
-        src="src/assets/images/icones/loupe-orange.png"
-        alt="icon search"
-        class="search__btn-icon"
-      />
-    </button>
   </div>
 </template>
 
@@ -36,18 +29,6 @@
     font-family: var(--fontText);
     padding-left: 1rem;
     outline: none;
-  }
-
-  &__btn {
-    background-color: #fff;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    padding: 0.35rem 1rem;
-
-    &-icon {
-      width: 3rem;
-      height: 3rem;
-    }
   }
 }
 </style>

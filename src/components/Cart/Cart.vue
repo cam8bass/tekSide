@@ -11,7 +11,7 @@ const emit = defineEmits<{
 
 const totalPrice = computed(() =>
   props.carts.reduce((acc, article) => {
-    return acc + article.price ;
+    return acc + article.price;
   }, 0)
 );
 </script>

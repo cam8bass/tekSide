@@ -16,7 +16,7 @@ const emit = defineEmits<{
     <span class="article__quantity"
       >x <span class="article__quantity-number">{{ cart.quantity }}</span></span
     >
-    <span class="article__price">{{ cart.price }}€</span>
+    <span class="article__price">{{ cart.pricePerItem }}€</span>
     <button
       @click="emit('removeArticleToCart', cart.id)"
       class="btn article__btn"
